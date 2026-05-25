@@ -1,0 +1,33 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "devops-portfolio",
+    "title": "DevOps Portfolio Overview",
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "CPU Usage",
+        "targets": [{
+          "expr": "avg(rate(node_cpu_seconds_total{mode=\"system\"}[5m]))",
+          "legendFormat": "CPU"
+        }],
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8}
+      },
+      {
+        "type": "graph",
+        "title": "Memory Utilization",
+        "targets": [{
+          "expr": "node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes",
+          "legendFormat": "Memory"
+        }],
+        "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8}
+      }
+    ],
+    "schemaVersion": 30,
+    "version": 1,
+    "refresh": "5s"
+  },
+  "folderId": 0,
+  "overwrite": false
+}
