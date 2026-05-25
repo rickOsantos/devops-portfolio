@@ -1,95 +1,107 @@
 # DevOps Portfolio – Ricardo Oliveira
 
-Welcome to my **DevOps Portfolio** – a curated collection of hands‑on projects that demonstrate the core skills required for the Junior DevOps position at Pantheon Inc.
+Bem-vindo ao meu **Portfólio DevOps** – uma coleção selecionada de projetos práticos que demonstram as principais habilidades necessárias para uma posição em DevOps.
 
 ---
 
-## 🎯 Goal
-> Showcase practical experience with **CI/CD**, **Docker**, **Kubernetes**, **IaC (Terraform)**, **AWS**, and **monitoring** (Grafana, Prometheus, Zabbix) while presenting a clean, professional GitHub presence.
+## 🎯 Objetivo
+> Demonstrar experiência prática com **CI/CD**, **Docker**, **Kubernetes**, **IaC (Terraform)**, **AWS** e **monitoramento** (Grafana, Prometheus, Zabbix), mantendo uma presença profissional e organizada no GitHub.
 
 ---
 
-## 📂 Repository Structure
-```
+## 📂 Estrutura do Repositório
+
+```text
 /devops-portfolio
 │
-├─ 01-docker-multi-container   # Docker + Docker‑Compose + K8s manifests
-├─ 02-terraform-aws            # Terraform IaC for AWS (VPC, EC2, RDS, SG)
-├─ 03-ci-cd-pipeline           # GitHub Actions CI/CD workflow (ci.yml)
-└─ 04-monitoring-stack         # Grafana/Prometheus + Zabbix monitoring stack
+├─ 01-docker-multi-container   # Docker + Docker-Compose + manifests Kubernetes
+├─ 02-terraform-aws            # IaC com Terraform para AWS (VPC, EC2, RDS, SG)
+├─ 03-ci-cd-pipeline           # Pipeline CI/CD com GitHub Actions (ci.yml)
+└─ 04-monitoring-stack         # Stack de monitoramento Grafana/Prometheus + Zabbix
 ```
 
-Each sub‑folder contains a **README.md** with detailed usage instructions, screenshots, and badge badges.
+Cada subpasta contém um arquivo **README.md** com instruções detalhadas de uso, capturas de tela e badges.
 
 ---
 
-## 🛠️ Technologies & Tools
-- **Docker** & **Docker‑Compose** – containerisation of a sample Node.js app.
-- **Kubernetes** – manifests to deploy the same app in a cluster.
-- **Terraform 1.6** – provisioning of a minimal AWS environment (VPC, sub‑nets, security groups, EC2, RDS).
-- **GitHub Actions** – automated build, test, Docker‑Hub push, and Terraform apply.
-- **Grafana & Prometheus** – observability stack with ready‑made dashboards.
-- **Zabbix** – agent‑based host monitoring (included in the monitoring‑stack).
-- **AWS Cloud** – the target cloud provider for the role.
+## 🛠️ Tecnologias & Ferramentas
+
+- **Docker** & **Docker-Compose** – conteinerização de uma aplicação exemplo em Node.js.
+- **Kubernetes** – manifests para implantação da mesma aplicação em um cluster.
+- **Terraform 1.6** – provisionamento de um ambiente AWS mínimo (VPC, sub-redes, grupos de segurança, EC2 e RDS).
+- **GitHub Actions** – automação de build, testes, push para Docker Hub e aplicação do Terraform.
+- **Grafana & Prometheus** – stack de observabilidade com dashboards prontos.
+- **Zabbix** – monitoramento baseado em agentes para hosts.
+- **AWS Cloud** – principal provedor de nuvem utilizado no projeto.
 
 ---
 
 ## 📦 Badges
-[![CI](https://github.com/rickOsantos/devops-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/rickOsantos/devops-portfolio/actions/workflows/ci.yml) 
-[![Docker Pulls](https://img.shields.io/docker/pulls/rickosantos/devops-portfolio)](https://hub.docker.com/r/rickosantos/devops-portfolio) 
+
+[![CI](https://github.com/rickOsantos/devops-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/rickOsantos/devops-portfolio/actions/workflows/ci.yml)
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/rickosantos/devops-portfolio)](https://hub.docker.com/r/rickosantos/devops-portfolio)
+
 [![Terraform](https://img.shields.io/badge/Terraform-1.6.5-blue.svg)](https://www.terraform.io)
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
+
 ```bash
-# 1️⃣ Clone the portfolio
+# 1️⃣ Clonar o portfólio
 git clone https://github.com/rickOsantos/devops-portfolio.git
 cd devops-portfolio
 
-# 2️⃣ Run Docker‑Compose (sample app)
+# 2️⃣ Executar o Docker-Compose (aplicação exemplo)
 cd 01-docker-multi-container
 docker compose up -d
 
-# 3️⃣ Deploy to Kubernetes (if you have a cluster)
+# 3️⃣ Fazer deploy no Kubernetes (caso possua um cluster)
 kubectl apply -f k8s-manifests/
 
-# 4️⃣ Provision AWS infra with Terraform
+# 4️⃣ Provisionar infraestrutura AWS com Terraform
 cd ../02-terraform-aws
 terraform init && terraform apply
 ```
 
 ---
 
-## 📚 Documentation & Screenshots
-- Each sub‑project includes a dedicated README with step‑by‑step instructions and screenshots of the running application, Terraform plan, and Grafana dashboards.
-- Feel free to explore the repository and adapt any component for your own environment.
+## 📚 Documentação & Capturas de Tela
+
+- Cada subprojeto possui um README dedicado com instruções passo a passo e capturas de tela da aplicação em execução, plano do Terraform e dashboards do Grafana.
+- Sinta-se à vontade para explorar o repositório e adaptar qualquer componente ao seu próprio ambiente.
 
 ---
 
 ## 🔗 Links
+
 - **GitHub profile:** https://github.com/rickOsantos
 - **LinkedIn:** https://www.linkedin.com/in/ricardo-oliveira-tech/
 - **Docker Hub:** https://hub.docker.com/u/rickosantos
 
 ---
 
-## 📈 How this portfolio matches the Pantheon Inc Junior DevOps role
-| Requirement | How the portfolio satisfies it |
+## 📈 Como este portfólio atende à vaga de Junior DevOps
+
+| Requisito | Como o portfólio atende |
 |------------|--------------------------------|
-| CI/CD pipelines (GitHub Actions / GitLab) | `03-ci-cd-pipeline/.github/workflows/ci.yml` builds Docker images, pushes to Docker Hub, runs Terraform and deploys to K8s. |
-| Docker & containerisation | `01-docker-multi-container` contains a Dockerfile, Docker‑Compose and K8s manifests. |
-| Kubernetes orchestration | K8s manifests ready for `kubectl apply`. |
-| IaC with Terraform | `02-terraform-aws` provisions a full AWS environment (VPC, EC2, RDS). |
-| Monitoring (Grafana, Prometheus, Zabbix) | `04-monitoring-stack` includes Grafana dashboards, Prometheus scrapers and a Zabbix server setup. |
-| Cloud (AWS) | Terraform scripts target AWS; Docker images can be deployed to AWS ECS/EKS. |
-| Networking (TCP/IP, sub‑nets, SG) | Terraform defines VPC CIDR, sub‑nets and security groups. |
+| Pipelines CI/CD (GitHub Actions / GitLab) | `03-ci-cd-pipeline/.github/workflows/ci.yml` realiza build de imagens Docker, push para Docker Hub, execução do Terraform e deploy em Kubernetes. |
+| Docker & conteinerização | `01-docker-multi-container` contém Dockerfile, Docker-Compose e manifests Kubernetes. |
+| Orquestração com Kubernetes | Manifests Kubernetes prontos para uso com `kubectl apply`. |
+| IaC com Terraform | `02-terraform-aws` provisiona um ambiente completo na AWS (VPC, EC2, RDS). |
+| Monitoramento (Grafana, Prometheus, Zabbix) | `04-monitoring-stack` inclui dashboards Grafana, scrapers Prometheus e configuração do Zabbix. |
+| Cloud (AWS) | Scripts Terraform utilizam AWS; imagens Docker podem ser implantadas em ECS/EKS. |
+| Redes (TCP/IP, sub-redes, Security Groups) | Terraform define CIDR da VPC, sub-redes e grupos de segurança. |
 
 ---
 
-## 🎉 Ready to impress?
-Use this portfolio as a concrete demonstration of your DevOps capabilities in interviews and on your résumé. Update the README with any personal touches, push the code, and share the link on your LinkedIn profile.
+## 🎉 Pronto para impressionar?
+
+Utilize este portfólio como uma demonstração concreta das suas habilidades em DevOps em entrevistas e no currículo. Atualize o README com toques pessoais, publique o código e compartilhe o link no LinkedIn.
 
 ---
 
-*All code is open‑source and released under the MIT License.*
+## 📄 Licença
+
+Todo o código é open source e distribuído sob a licença MIT.
